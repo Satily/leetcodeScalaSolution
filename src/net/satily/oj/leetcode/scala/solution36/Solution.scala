@@ -2,9 +2,9 @@ package net.satily.oj.leetcode.scala.solution36
 
 object Solution {
     def isValidSudoku(board: Array[Array[Char]]): Boolean = {
-        def vaildate(nums: Seq[Int]): Boolean = nums.toSet.size == nums.size
+        def validate(nums: Seq[Int]): Boolean = nums.toSet.size == nums.size
         def removeDot(chars: Seq[Char]): Seq[Int] = chars.filterNot('.' == _).map(_.toInt)
-        val vaildateSubboard: Seq[Char] => Boolean = removeDot _ andThen vaildate
+        val validateSubboard: Seq[Char] => Boolean = removeDot _ andThen validate
         Seq(
             board.map(_.toSeq).toSeq,
             board.flatMap(_.zipWithIndex).groupBy(_._2).values.map(_.map(_._1).toSeq).toSeq,
