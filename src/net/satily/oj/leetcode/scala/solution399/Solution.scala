@@ -45,11 +45,11 @@ object Solution {
 
 object Main {
     def main(args: Array[String]): Unit = {
-//        Solution.calcEquation(
-//            Array(Array("a", "b"), Array("b", "c")),
-//            Array(2.0, 3.0),
-//            Array(Array("a", "c"), Array("b", "a"), Array("a", "e"), Array("a", "a"), Array("x", "x"))
-//        ).foreach(println)
+        Solution.calcEquation(
+            Array(Array("a", "b"), Array("b", "c")),
+            Array(2.0, 3.0),
+            Array(Array("a", "c"), Array("b", "a"), Array("a", "e"), Array("a", "a"), Array("x", "x"))
+        ).foreach(println)
         Solution.calcEquation(
             Array(Array("x1", "x2"), Array("x2", "x3"), Array("x1", "x4"), Array("x2", "x5")),
             Array(3.0,0.5,3.4,5.6),
