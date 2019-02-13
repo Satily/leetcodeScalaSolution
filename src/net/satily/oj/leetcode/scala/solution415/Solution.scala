@@ -2,10 +2,14 @@ package net.satily.oj.leetcode.scala.solution415
 
 object Solution {
   def addStrings(num1: String, num2: String): String = {
-    val (rs, ri) = num1.reverse.zipAll(num2.reverse, '0', '0').foldLeft(("", 0)) {
-      case ((s, i), (c1, c2)) =>
-        (s + ((c1 + c2 + i - '0' * 2) % 10), (c1 + c2 + i - '0' * 2) / 10)
-    }
+    val (rs, ri): (String, Int) =
+      num1
+        .reverse
+        .zipAll(num2.reverse, '0', '0')
+        .foldLeft(("", 0)) {
+          case ((s, i), (c1, c2)) =>
+            (s + ((c1 + c2 + i - '0' * 2) % 10), (c1 + c2 + i - '0' * 2) / 10)
+        }
     (rs + (if (ri == 1) "1" else "")).reverse
   }
 }
