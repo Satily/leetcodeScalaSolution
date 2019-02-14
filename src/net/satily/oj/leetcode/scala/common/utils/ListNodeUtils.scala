@@ -1,20 +1,11 @@
-package net.satily.oj.leetcode.scala.common
+package net.satily.oj.leetcode.scala.common.utils
+
+import net.satily.oj.leetcode.scala.common.structure.ListNode
 
 import scala.collection.mutable
 
-class ListNode(var _x: Int = 0) {
-  var next: ListNode = null
-  var x: Int = _x
-}
-
 object ListNodeUtils {
-  def fromList(list: List[Int]): ListNode = list match {
-    case Nil => null
-    case _ =>
-      val node = new ListNode(list.head)
-      node.next = fromList(list.drop(1))
-      node
-  }
+  def fromList(list: List[Int]): ListNode = ListNode(list)
 
   def toList(listNode: ListNode): List[Int] = {
     val result: mutable.MutableList[Int] = mutable.MutableList.empty

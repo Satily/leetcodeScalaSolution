@@ -1,6 +1,7 @@
 package net.satily.oj.leetcode.scala.solution203
 
-import net.satily.oj.leetcode.scala.common.{ListNode, ListNodeUtils}
+import net.satily.oj.leetcode.scala.common.structure.ListNode
+import net.satily.oj.leetcode.scala.common.utils.ListNodeUtils
 
 object Solution {
   def removeElements(head: ListNode, `val`: Int): ListNode = {

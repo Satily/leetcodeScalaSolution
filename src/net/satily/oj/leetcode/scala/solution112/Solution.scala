@@ -1,6 +1,7 @@
 package net.satily.oj.leetcode.scala.solution112
 
-import net.satily.oj.leetcode.scala.common.{TreeNode, TreeNodeUtils}
+import net.satily.oj.leetcode.scala.common.structure.TreeNode
+import net.satily.oj.leetcode.scala.common.utils.TreeNodeUtils
 
 object Solution {
   def hasPathSum(root: TreeNode, sum: Int): Boolean = {
