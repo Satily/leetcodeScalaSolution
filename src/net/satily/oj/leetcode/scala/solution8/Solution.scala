@@ -7,7 +7,7 @@ object Solution {
     val minInt: Long = -2147483648L
     val numbers: Set[Char] = ('0' to '9').toSet
 
-    def parse(rest: Seq[Char], sign: Boolean = true): Long = {
+    def parse(rest: Seq[Char]): Long = {
       rest
         .takeWhile(numbers.contains)
         .dropWhile(_ == '0')
@@ -22,7 +22,7 @@ object Solution {
         -parse(rest)
       case Nil =>
         0L
-      case rest if numbers.contains(rest.head) =>
+      case rest @ h :: _ if numbers.contains(h) =>
         parse(rest)
       case _ =>
         0L
