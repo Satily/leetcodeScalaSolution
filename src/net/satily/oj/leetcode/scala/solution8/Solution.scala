@@ -20,12 +20,8 @@ object Solution {
         parse(rest)
       case '-' :: rest =>
         -parse(rest)
-      case Nil =>
-        0L
-      case rest @ h :: _ if numbers.contains(h) =>
+      case rest =>
         parse(rest)
-      case _ =>
-        0L
     }
 
     Seq(Seq(minInt, res).max, maxInt).min.toInt
